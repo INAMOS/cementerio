@@ -1,0 +1,118 @@
+.{
+	margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+/* }
+body{
+	background:url("../images/imagenc.png"); 
+                min-height: 100vh;
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment:fixed;
+
+		} */
+
+marquee{
+color:#13AFA3;
+margin:50px;
+}
+
+div.menu{
+	background:#13AFA3;
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+	float:right;
+}
+
+
+.button{
+     background:#13AFA3;
+     color:#fff;
+     display:inline-block;
+     font-size:18px;
+     padding:10px 0px;
+     text-align:center;
+     width:150px;
+     text-decoration:none;
+     float:left; 
+     background-attachment:fixed;
+}
+.button span{
+	margin-right:10px; 
+}
+.button:hover{
+	background:#fff;
+	color:#13AFA3;
+	box-shadow:0px 0px 0px;
+	padding-top:10px
+
+}
+h1{
+	 background:#13AFA3;
+	 color:#fff;
+	 border-radius: 5px;
+	  font-size:20px;
+}
+div.icontainer{
+	display:inline-block;
+	vertical-align:top;
+}
+.icontainer i{
+	border: solid 1px #ccc;
+	padding:10px 10px 10px 10px;
+	margin-right:-5px;
+	vertical-align: 
+	
+}
+.login{
+    background-size:cover;
+    background-position:center center; 
+    display:flex;
+    align-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+}
+.login.container{
+	width:100%;
+	text-align:center;
+	align-content:center;
+    align-items:center;
+    text-align:center;
+    display:inline-block; 
+}
+.login.container.contlog{
+	width:100%;
+	max-width:500px;
+	background:rgba(255, 255, 255, 0.7);
+	padding:30px;
+	border-radius: 10px;
+	background-position:center; 
+	text-align:center;
+	display:inline-block; 
+
+}
+button.sesion{
+	padding:10px;
+	color:#fff;
+	background:#13AFA3;
+	width:100%;
+	margin:20px auto;
+	margin-top:0;
+	border:0;
+	border-radius:3px;
+	cursor:pointer;
+
+}
+header{
+	border-bottom:2px solid #eee;
+	padding:20px 0;
+	margin-bottom:10px;
+	width:100%;
+	text-align:center;
+}
