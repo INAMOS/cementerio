@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <div class="form-label-group">
                         <input type="text" id="cedula" class="form-control" name="cedul_prop"
-                            placeholder="Email address" required="required" autofocus="autofocus">
+                            placeholder="Email address" required="required" size="9" autofocus="autofocus">
                         <label for="cedula">Cedula</label>
                     </div>
                 </div>

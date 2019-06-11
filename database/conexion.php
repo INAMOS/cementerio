@@ -3,12 +3,16 @@
   function conectar(){
 
 
-      $user="cementerio";
-      $pass="Ca2O96vv4-r~";
-      $host="den1.mysql6.gear.host";
-      $db="cementerio";
-      // $con=mysqli_connect($server,$user,$pass) or die ("ERROR AL CONECTAR LA BASE DE DATOS".mysql_error());
+      // $user="cementerio";
+      // $pass="Ca2O96vv4-r~";
+      // $host="den1.mysql6.gear.host";
+      // $db="cementerio";
 
+      $user="root";
+      $pass="";
+      $host="localhost";
+      $db="cementerio";
+     
       try{
 
         $con=new PDO("mysql:host=$host;dbname=$db",$user,$pass);

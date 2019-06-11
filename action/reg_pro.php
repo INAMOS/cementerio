@@ -13,7 +13,8 @@ $correopro=$_POST["correo_pro"];
 $direccpro=$_POST["direcc_pro"];
 
 
-$query="INSERT INTO tabla_prop  (cedul_prop,nombr_prop,apell_prop,celul_prop,telef_prop,correo_pro,direcc_pro) VALUES (:cedul_prop,:nombr_prop,:apell_prop,:celul_prop,:telef_prop,:correo_pro,:direcc_pro)";
+// $query="INSERT INTO tabla_prop  (cedul_prop,nombr_prop,apell_prop,celul_prop,telef_prop,correo_pro,direcc_pro) VALUES (:cedul_prop,:nombr_prop,:apell_prop,:celul_prop,:telef_prop,:correo_pro,:direcc_pro)";
+$query="INSERT INTO tabla_prop  (cedul_prop,nombr_prop,apell_prop,celul_prop,correo_pro,direcc_pro) VALUES (:cedul_prop,:nombr_prop,:apell_prop,:celul_prop,:correo_pro,:direcc_pro)";
 
 
 $resultado=$con->prepare($query);
@@ -29,11 +30,11 @@ $resultado->bindParam(":direcc_pro",$direccpro);
 
 if($resultado->execute()){
 
-  header('location:../vistas/registro_sep.php');
+  header('location:../vistas/propietario.php?exi=Insertado correctamente');
 
 }else {
 
-  echo "no inserto";
+  header('location:../vistas/propietario..php?err=Hubo un error al insertar, vuelve a intentarlo');
 
 }
 

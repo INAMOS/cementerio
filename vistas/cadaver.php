@@ -8,7 +8,7 @@
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Registrar de Cadaver</div>
         <div class="card-body">
-            <form action="../action/reg_pro.php" method="POST">
+            <form action="../action/reg_cdv.php" method="POST">
                 <div class="form-group">
                     <div class="form-label-group">
                         <input type="text" id="cedula" class="form-control" name="cedul_cadv"
