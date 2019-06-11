@@ -57,6 +57,8 @@
 </div>
 
 <script>
+
+
 let select = document.getElementById("tipo");
 
 select.addEventListener("change", function() {
@@ -78,10 +80,7 @@ select.addEventListener("change", function() {
             privateSelect.appendChild(option);
 
         }
-        // let private=document.getElementById("private")
-        // let option=document.createElement("option");
-        // option.appendChild( document.createTextNode('New Option Text') );
-
+       
 
     } else {
         let boxSelect = document.getElementById("boxSelect");
@@ -90,6 +89,8 @@ select.addEventListener("change", function() {
     }
 
 })
+
+
 </script>
 
 <?php include "partials/footer.php"; ?>
