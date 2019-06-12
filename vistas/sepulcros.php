@@ -9,54 +9,16 @@
 
 
 <div class="alert alert-primary alert-dismissible fade show" role="alert">
-    <h4 class="alert-heading">Bienvenida <?php echo $_SESSION["usuario"]["nom_usu"]; ?>!</h4>
-    <p>Bienvenido/a al sistema de control de registros del cementerio Municipal Andres Bello</p>
+    <h4 class="alert-heading">Estos son los registros del cementerio!</h4>
     <hr>
-    <p class="mb-0">Este sistema te ayudara en todo el control del cementerio</p>
+    <p class="mb-0">Aqui puedes ver todas los sepulcros que hay</p>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
 
 
-<!-- <div class="card mb-3">
-  <img src="public/images/imagenc.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Parte Principal del cementerio</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Actualizado hace 3 minutos</small></p>
-  </div>
-</div> -->
-
-
-<!-- <div class="card-group">
-  <div class="card">
-    <img src="public/images/imagenc.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="public/images/imagen1.jpg" class="card-img-top" alt="..." width="30%">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="public/images/imagenc.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div> -->
-
-<div class="container">
+<!-- <div class="container">
 </div>
 
 <div class="jumbotron">
@@ -131,7 +93,7 @@
 
 
 
-</div>
+</div> -->
 
 <script>
 $('.alert').alert()
@@ -228,7 +190,7 @@ $('.alert').alert()
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div> -->
 
-<!-- DataTables Example
+ <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table"></i>
@@ -238,11 +200,11 @@ $('.alert').alert()
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
+                                    <th>Nombre</th>
                                     <th>Position</th>
                                     <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
+                                    <th>Edad</th>
+                                    <th>Fecha de Entierro</th>
                                     <th>Salary</th>
                                 </tr>
                             </thead>
@@ -718,7 +680,7 @@ $('.alert').alert()
                     </div>
                 </div>
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div> -->
+            </div> 
 
 
 </div>

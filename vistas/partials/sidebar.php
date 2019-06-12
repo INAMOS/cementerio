@@ -30,9 +30,9 @@
                 <span>Fosas</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="sepulcros.php">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
+                <span>Sepulcros</span></a>
         </li>
     </ul>
 
