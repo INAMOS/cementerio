@@ -202,10 +202,10 @@ $('.alert').alert()
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Position</th>
-                                    <th>Office</th>
+                                    <th>Lugar</th>
                                     <th>Edad</th>
                                     <th>Fecha de Entierro</th>
-                                    <th>Salary</th>
+                                    <th>Costo</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -283,7 +283,7 @@ $('.alert').alert()
                                     <td>2010/10/14</td>
                                     <td>$327,900</td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>Colleen Hurst</td>
                                     <td>Javascript Developer</td>
                                     <td>San Francisco</td>
@@ -674,7 +674,7 @@ $('.alert').alert()
                                     <td>27</td>
                                     <td>2011/01/25</td>
                                     <td>$112,000</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>

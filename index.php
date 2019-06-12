@@ -22,18 +22,18 @@
     <link rel="stylesheet" href="vistas/css/sigin.css">
     <link rel="stylesheet" href="vistas/css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vistas/css/bootstrap-4.3.1-dist//4.3.1/js/bootstrap.min.js">
-    
-     <!-- Page level plugin CSS-->
-     
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-<!-- Page level plugin CSS-->
-<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Page level plugin CSS-->
 
-<!-- Custom styles for this template-->
-<link href="css/sb-admin.css" rel="stylesheet">
-  <link href="vistas/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="vistas/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 </head>
 <!-- BOTONES PRINCIPALES -->
 
@@ -55,22 +55,24 @@
 
         <!-- Image and text -->
         <nav class="navbar navbar-dark bg-dark" style="color:#13AFA3">
+           
             <a class="navbar-brand" href="#">
-                <img src="vistas\public\images\logo.png" width="20%" height="20%" class="d-inline-block align-top"
-                    alt="">
+            <img src="vistas\public\images\icon\iconosybsr\fonts\cross-solid.svg" width="50px" height="50px"
+                class="d-inline-block align-top" style="color:white" alt="">
+                Cementerio
             </a>
 
 
-            <ul class="nav justify-content-center" >
+            <ul class="nav justify-content-center">
                 <li class="nav-item">
-                
+
                     <a class="nav-link active" href="index.php" style="color:white"><i class="fa fa-home"></i>Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" style="color:white"><i class="fa fa-university"></i>Empresa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color:white"><i class="fa fa-gavel" ></i>Ordenanza</a>
+                    <a class="nav-link" href="#" style="color:white"><i class="fa fa-gavel"></i>Ordenanza</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" style="color:white"><i class="fa fa-map-marker"></i>Mapas</a>
@@ -79,7 +81,7 @@
 
         </nav>
 
-<!-- 
+        <!-- 
 
         <nav class="navbar navbar-dark bg-dark static-top">
 
@@ -169,9 +171,9 @@
             
                 ?>
 
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $_GET["error"]?>
-                    </div>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $_GET["error"]?>
+                </div>
 
                 <?php
                         unset($_GET["error"]);
@@ -179,7 +181,7 @@
                 ?>
 
             </div>
-            
+
         </div>
 
 
@@ -233,7 +235,7 @@
 
 
 
-        
+
         <!-- </div> -->
 
 
