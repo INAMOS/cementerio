@@ -4,6 +4,21 @@
 
 <?php include "partials/sidebar.php"; ?>
 
+
+<?php
+            
+                    if(isset($_GET["exi"])):                
+            
+                ?>
+
+    <div class="alert alert-success" role="alert">
+        <?php echo $_GET["exi"]?>
+    </div>
+
+    <?php
+                        unset($_GET["exi"]);
+                        endif;
+                ?>
 <div class="container">
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Registro de Sepulcro</div>
@@ -17,48 +32,65 @@
                     </div>
                 </div>
 
+                <input type="hidden" name="cedu_prop" value="<?php echo $_GET["ced"]; ?>">
+
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Descripcion del Sepulcro</label>
                     <textarea name="descr_sepu" class="form-control" id="exampleFormControlTextarea1" rows="3"
                         required></textarea>
                 </div>
-                <!-- <div class="form-group">
-                    <select class="custom-select" id="tipo" name="descr_tipo" required>
+                <div class="form-group">
+                    <!-- <select class="custom-select" id="tipo" name="descr_tipo" required>
                         <option value="publico">Publico</option>
                         <option value="privado">Privado</option>
                     </select>
                 </div> -->
 
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+                        </div>
+                        <select class="custom-select" id="tipo" name="descr_tipo" required>
+                            <option selected disabled>Elige una opcion...</option>
+                            <option value="publico">Publico</option>
+                            <option value="privado">Privado</option>
+                        </select>
                     </div>
-                    <select class="custom-select" id="tipo" name="descr_tipo" required>
-                        <option selected disabled>Elige una opcion...</option>
-                        <option value="publico">Publico</option>
-                        <option value="privado">Privado</option>
-                    </select>
-                </div>
 
-                <div class="input-group mb-3" id="boxSelect" style="display:none">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Nro de Sepulcros</label>
+                    <div class="input-group mb-3" id="boxSelect" style="display:none">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Nro de Sepulcros</label>
+                        </div>
+                        <select class="custom-select" name="private" id="private">
+                            <!-- <option value="1">1</option> -->
+                        </select>
                     </div>
-                    <select class="custom-select" name="private" id="private" required>
-                        <option value="">1</option>
-                    </select>
-                </div>
 
-                <input type="submit" class="btn btn-primary btn-block" value="Registrar">
+                    <input type="submit" class="btn btn-primary btn-block" value="Registrar">
             </form>
 
         </div>
     </div>
+
+
+    <?php
+            
+                    if(isset($_GET["exi"])):                
+            
+                ?>
+
+    <div class="alert alert-success" role="alert">
+        <?php echo $_GET["exi"]?>
+    </div>
+
+    <?php
+                        unset($_GET["exi"]);
+                        endif;
+                ?>
+
 </div>
 
 <script>
-
-
 let select = document.getElementById("tipo");
 
 select.addEventListener("change", function() {
@@ -66,7 +98,7 @@ select.addEventListener("change", function() {
 
     if (this.value == "privado") {
 
-        let boxSelect=document.getElementById("boxSelect");
+        let boxSelect = document.getElementById("boxSelect");
         let privateSelect = document.getElementById("private");
 
         boxSelect.style.display = "flex"
@@ -80,7 +112,7 @@ select.addEventListener("change", function() {
             privateSelect.appendChild(option);
 
         }
-       
+
 
     } else {
         let boxSelect = document.getElementById("boxSelect");
@@ -89,8 +121,6 @@ select.addEventListener("change", function() {
     }
 
 })
-
-
 </script>
 
 <?php include "partials/footer.php"; ?>

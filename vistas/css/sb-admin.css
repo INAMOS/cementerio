@@ -6985,7 +6985,9 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  /* background-color: #343a40 !important; */
+  
+  background-color: #4f8bd1 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -10670,7 +10672,8 @@ body {
 
 .sidebar {
   width: 90px !important;
-  background-color: #212529;
+  background-color: #4295f4;
+  /* background-color: #212529; */
   min-height: calc(100vh - 56px);
 }
 

@@ -11,38 +11,38 @@ $fecha=$_POST['fecha_inhum'];
 $emp="";
 
 // $query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cad,apell_cadv,fech_inhum,estatus_cd,tabla_sepu_tabla_sepu,tabla_sepu_tabla_prop_cedul_prop,tabla_exhu_fecha_exhu) VALUES (cedul_cadv,nombr_cad,apell_cadv,fech_inhum);";
-$query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cad,apell_cadv,fech_inhum,estatus_cd,tabla_sepu_tabla_sepu,tabla_sepu_tabla_prop_cedul_prop,tabla_exhu_fecha_exhu) VALUES (:cedul_cadv,:nombr_cad,:apell_cadv,:fech_inhum,:estatus_cd,:tabla_sepu_tabla_sepu,:tabla_sepu_tabla_prop_cedul_prop,:tabla_exhu_fecha_exhu);";
-
+// $query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cadv,apell_cadv,fech_inhum,estatus_cd,tabla_sepu_tabla_sepu,tabla_sepu_tabla_prop_cedul_prop,tabla_exhu_fecha_exhu) VALUES (:cedul_cadv,:nombr_cad,:apell_cadv,:fech_inhum,:estatus_cd,:tabla_sepu_tabla_sepu,:tabla_sepu_tabla_prop_cedul_prop,:tabla_exhu_fecha_exhu)";
+$query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cadv,apell_cadv,fech_inhum) VALUES (:cedul_cadv,:nombr_cad,:apell_cadv,:fech_inhum)";
 
 $resultado=$con->prepare($query);
 
 $resultado->bindParam(":cedul_cadv",$cedpro);
 $resultado->bindParam(":nombr_cad",$nombpro);
 $resultado->bindParam(":apell_cadv",$apellpro);
-$resultado->bindParam(":fech_inhum",$celpro);
-$resultado->bindParam(":estatus_cd",$emp);
-$resultado->bindParam(":tabla_sepu_tabla_sepu",$emp);
-$resultado->bindParam(":tabla_sepu_tabla_prop_cedul_prop",$emp);
-$resultado->bindParam(":tabla_exhu_fecha_exhu",$emp);
+$resultado->bindParam(":fech_inhum",$fecha);
+// $resultado->bindParam(":estatus_cd",$emp);
+// $resultado->bindParam(":tabla_sepu_tabla_sepu",$emp);
+// $resultado->bindParam(":tabla_sepu_tabla_prop_cedul_prop",$emp);
+// $resultado->bindParam(":tabla_exhu_fecha_exhu",$emp);
 
-$resultado->execute();
+// $resultado->execute();
 
-try {
-    $resultado->execute();
+// try {
+//     $resultado->execute();
 
-} catch (PDOException $err) {
-    echo $err->getMessage();
-}
-
-// if($resultado->execute()){
-
-//   header('location:../vistas/cadaver.php?exi=Insertado correctamente');
-
-// }else {
-
-//   header('location:../vistas/cadaver.php?err=Hubo un error al insertar, vuelve a intentarlo');
-
+// } catch (PDOException $err) {
+//     echo $err->getMessage();
 // }
+
+if($resultado->execute()){
+
+  header('location:../vistas/cadaveres.php?exi=Insertado correctamente');
+
+}else {
+
+  header('location:../vistas/cadaver.php?err=Hubo un error al insertar, vuelve a intentarlo');
+
+}
 
 
 ?>

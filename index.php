@@ -16,23 +16,25 @@
     <link rel="shortcut icon" href="vistas\public\images\iconcem1.ico">
     <link rel="stylesheet" href="vistas\public\css\inicio.css">
     <link rel="stylesheet" href="vistas\public\images\icon\iconosybsr\style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="vistas/css/sigin.css">
     <link rel="stylesheet" href="vistas/css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vistas/css/bootstrap-4.3.1-dist//4.3.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="vistas/css/bootstrap-4.3.1-dist/4.3.1/js/bootstrap.min.js">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 
     <!-- Page level plugin CSS-->
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vistas/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="vistas/css/sb-admin.css" rel="stylesheet">
     <link href="vistas/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 </head>
 <!-- BOTONES PRINCIPALES -->
@@ -40,25 +42,16 @@
 <body>
     <div class="contedor">
         <div>
-            <!-- <img src="..\images\logo.png" style="width:150px; height:130px; margin:30px; float:left" id="logo"> -->
-            <!-- <div class="menu" style="width:100%;height:100%;" align="center">
-	
-	<img src="vistas\public\images\logo.png" style="width:7%; height:7%; margin:30px; float:left" id="logo">
-	<table style="color:#13AFA3;float:right; width:30%">
-	<a href="../index.html" class="button" align="center">  <span class="icon-home" onClick="sistema_menu(1)"></span> Inicio</a>
-	<a href="#2" class="button" align="center"> <span class="icon-institution" onClick="sistema_menu(2)"></span>Empresa</a>
-	<a href="#2" class="button" align="center"> <span class="icon-legal" onClick="sistema_menu(3)"></span>Ordenanza</a></td>
-	<a href="#4" class="button" align="center"> <span class="icon-map-marker" onClick="sistema_menu(4)"></span>Mapa</a>
-</div> -->
+
             <!-- </table> -->
         </div>
 
         <!-- Image and text -->
         <nav class="navbar navbar-dark bg-dark" style="color:#13AFA3">
-           
+
             <a class="navbar-brand" href="#">
-            <img src="vistas\public\images\icon\iconosybsr\fonts\cross-solid.svg" width="50px" height="50px"
-                class="d-inline-block align-top" style="color:white" alt="">
+                <img src="vistas\public\images\icon\iconosybsr\fonts\cross-solid.svg" width="50px" height="50px"
+                    class="d-inline-block align-top" style="color:white" alt="">
                 Cementerio
             </a>
 
@@ -81,47 +74,9 @@
 
         </nav>
 
-        <!-- 
-
-        <nav class="navbar navbar-dark bg-dark static-top">
-
-            <a class="navbar-brand mr-1" href="#">
-                <img src="vistas\public\images\logo.png" width="20%" height="20%" class="d-inline-block align-top"
-                    alt="cementerio">
-                    <i class="fa fa-cross"></i>
-            </a>
-
-            
-            <ul class="navbar-nav ml-auto ml-md-0">
-                
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php"><i class="fa fa-home"></i>Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-university"></i>Empresa</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-gavel"></i>Ordenanza</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-map-marker"></i>Mapas</a>
-                </li>
-            </ul>
-
-        </nav> -->
 
 
-        <!-- <nav>
 
-<img src="vistas\public\images\logo.png" style="width:150px; height:130px; margin:30px; float:left" id="logo">
-    
-</nav> -->
-        <!-- 
-        <div style="margin-left:100px; margin-right: 100px; ">
-            <marquee style="font-family:Comic Sans MS, Helvetica, sans-serif;" align="center">
-                <p>CEMENTERIO MUNICIPAL "ANDRES BELLO"</p>
-            </marquee>
-        </div> -->
 
 
 
@@ -182,6 +137,34 @@
 
             </div>
 
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -250,6 +233,17 @@
             <strong style="color:#e5dd4e;">Objetivo Funcional</strong><br>Promover y ejecutar d manera eficiente y oportuna la ordenanza municipal de administración y mantenimiento del cementerio municipal y demás leyes estatales y nacionales siendo de nuestra gestión dar cumplimiento las siguientes funciones:
             <br><br> A. La estructura orgánica del servicio, su planificación y ordenamiento.<br>B. La realización de las obras, servicios y trabajos necesarios para la reparación, conservación, cuidado y limpieza de los cementerios y, en particular, de sus elementos urbanísticos, jardinería, construcciones e instalaciones, así como para el funcionamiento de éstos.<br>C. La imposición y exacción de tributos, con arreglo a las ordenanzas fiscales, y la regulación de las condiciones de uso y disfrute de las unidades de enterramiento.<br>D. La administración, inspección y control estadístico.<br>E. La inhumación, exhumación, traslado e incineración de cadáveres y la reducción de restos.<br>
         </div> -->
-</body>
 
-</html>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1"></script>
+
+
+        </body>
+
+        </html>

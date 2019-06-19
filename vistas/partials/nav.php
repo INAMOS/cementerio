@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+<nav class="navbar navbar-expand navbar-dark static-top" style="background-color: #2092ed;">
 
     <a class="navbar-brand mr-1" href="#">Cementerio</a>
 
@@ -53,7 +53,7 @@
                 <i class="fas fa-user-circle fa-fw"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">Configuraciones</a>
+
                 <!-- <a class="dropdown-item" href="#">Activity Log</a> -->
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesion</a>

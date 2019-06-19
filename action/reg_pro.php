@@ -30,7 +30,8 @@ $resultado->bindParam(":direcc_pro",$direccpro);
 
 if($resultado->execute()){
 
-  header('location:../vistas/propietario.php?exi=Insertado correctamente');
+  // header('location:../vistas/propietario.php?exi=Insertado correctamente');
+  header("location:../vistas/sepulcro.php?exi=Propietario insertado correctamente, llene los datos de sepulcro&ced=$cedpro");
 
 }else {
 

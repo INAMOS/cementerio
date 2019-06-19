@@ -3,7 +3,8 @@
 <footer class="sticky-footer">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Realizado por <i>Yirleit Sanchez</i> 2019</span>
+            <span>Esta ubicado <i></i> </span>
+            <span>Realizado por <i>Servicio Comunitario</i>2019</span>
         </div>
     </div>
 </footer>

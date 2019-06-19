@@ -3,15 +3,15 @@
   function conectar(){
 
 
-      $user="cementerio";
-      $pass="Ca2O96vv4-r~";
-      $host="den1.mysql6.gear.host";
-      $db="cementerio";
-
-      // $user="root";
-      // $pass="";
-      // $host="localhost";
+      // $user="cementerio";
+      // $pass="Ca2O96vv4-r~";
+      // $host="den1.mysql6.gear.host";
       // $db="cementerio";
+
+      $user="root";
+      $pass="";
+      $host="localhost";
+      $db="cementerio";
      
       try{
 
