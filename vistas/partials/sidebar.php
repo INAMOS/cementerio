@@ -18,11 +18,13 @@
                 <a class="dropdown-item" href="propietario.php">Propietarios</a>
                 <a class="dropdown-item" href="venta.php">Venta</a>
                 <a class="dropdown-item" href="sepulcro.php">Sepulcro</a>
+                <a class="dropdown-item" href="restero.php">Restero</a>
                 <div class="dropdown-divider"></div>
                 <h6 class="dropdown-header">Listado:</h6>
                 <a class="dropdown-item" href="fosas.php">Fosas</a>
-                <a class="dropdown-item" href="cadaveres.php">Cadaveres</a>
+                <!-- <a class="dropdown-item" href="cadaveres.php">Cadaveres</a> -->
                 <a class="dropdown-item" href="sepulcros.php">Sepulcro</a>
+                <a class="dropdown-item" href="ventas.php">Venta</a>
             </div>
         </li>
         <li class="nav-item">

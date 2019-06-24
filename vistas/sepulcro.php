@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <input type="hidden" name="cedu_prop" value="<?php echo $_GET["ced"]; ?>">
+                <!-- <input type="hidden" name="cedu_prop" value="<?php echo $_GET["ced"]; ?>"> -->
 
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Descripcion del Sepulcro</label>

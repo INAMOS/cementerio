@@ -14,7 +14,7 @@ $direccpro=$_POST["direcc_pro"];
 
 
 // $query="INSERT INTO tabla_prop  (cedul_prop,nombr_prop,apell_prop,celul_prop,telef_prop,correo_pro,direcc_pro) VALUES (:cedul_prop,:nombr_prop,:apell_prop,:celul_prop,:telef_prop,:correo_pro,:direcc_pro)";
-$query="INSERT INTO tabla_prop  (cedul_prop,nombr_prop,apell_prop,celul_prop,correo_pro,direcc_pro) VALUES (:cedul_prop,:nombr_prop,:apell_prop,:celul_prop,:correo_pro,:direcc_pro)";
+$query="INSERT INTO tabla_prop (cedul_prop,nombr_prop,apell_prop,celul_prop,correo_pro,direcc_pro) VALUES (:cedul_prop,:nombr_prop,:apell_prop,:celul_prop,:correo_pro,:direcc_pro)";
 
 
 $resultado=$con->prepare($query);
@@ -30,8 +30,18 @@ $resultado->bindParam(":direcc_pro",$direccpro);
 
 if($resultado->execute()){
 
-  // header('location:../vistas/propietario.php?exi=Insertado correctamente');
-  header("location:../vistas/sepulcro.php?exi=Propietario insertado correctamente, llene los datos de sepulcro&ced=$cedpro");
+  $id=$_GET["id"];
+  $query="UPDATE tabla_sepu SET cedul_prop=:ced WHERE codig_sepu=:codi";
+  $resultado=$con->prepare($query);
+  $resultado->bindParam(":ced",$cedpro);
+  $resultado->bindParam(":codi",$id);
+
+  if($resultado->execute()){
+     // header('location:../vistas/propietario.php?exi=Insertado correctamente');
+    header("location:../vistas/sepulcros.php?exi=Propietario insertado correctamente, llene los datos de sepulcro");
+
+  }
+ 
 
 }else {
 

@@ -60,7 +60,7 @@
 </div>
 
 <div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
+    <h1 class="display-4">Bienvenido!</h1>
    
     <div id="carouselExampleIndicators" class="carousel slide container-fluid" data-ride="carousel" style="padding:30px">
         <ol class="carousel-indicators">

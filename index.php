@@ -116,8 +116,8 @@
                             <input type="submit" class="btn btn-primary btn-block" value="Login">
                     </form>
                     <div class="text-center">
-                        <a class="d-block small mt-3" href="#">Register an Account</a>
-                        <a class="d-block small" href="#">Forgot Password?</a>
+                        <a class="d-block small mt-3" href="#">Recuperar Cuenta</a>
+                        <!-- <a class="d-block small" href="#">Forgot Password?</a> -->
                     </div>
                 </div>
                 <?php
@@ -141,9 +141,9 @@
 
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
             Launch demo modal
-        </button>
+        </button> -->
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"

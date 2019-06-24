@@ -41,6 +41,8 @@
                         <label for="celular">Fecha de Inhumacion</label>
                     </div>
                 </div>
+
+                <input type="hidden" name="cod_fosa" value="<?php echo $_GET['id']?>">
                 <!-- <div class="form-group">
                     <div class="form-label-group">
                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="correo_pro"

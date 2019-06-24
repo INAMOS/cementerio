@@ -3,7 +3,7 @@
 <footer class="sticky-footer">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Esta ubicado <i></i> </span>
+    
             <span>Realizado por <i>Servicio Comunitario</i>2019</span>
         </div>
     </div>

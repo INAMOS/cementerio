@@ -216,7 +216,7 @@ $('.alert').alert()
                         <th>Codigo</th>
                         <th>Descripcion</th>
                         <th>Tipo</th>
-                        <th>cantidad sepulcro</th>
+                        <th>cantidad de fosas</th>
                         <th>cedula propietario</th>
                         <th>actividad</th>
                     </tr>
@@ -244,12 +244,12 @@ $('.alert').alert()
                 
                 ?>
                     <tr>
-                        <td><?php echo $fila[$i]["codig_sepu"] ?></td>
+                        <td><?php echo $fila[$i]["codig_sepu"]; $cod=$fila[$i]["codig_sepu"]; ?></td>
                         <td><?php echo $fila[$i]["descr_sepu"] ?></td>
                         <td><?php echo $fila[$i]["descr_tipo"] ?></td>
                         <td><?php echo $fila[$i]["can_sepu"] ?></td>
-                        <td><?php echo $fila[$i]["ced_prop"]; $cdn=$fila[$i]["can_sepu"]; ?></td>
-                        <td><button type="button" class="btn btn-outline-success" onclick="location.href='cadaveres.php?cdn=<?php echo $cdn?>'">Administrar Sepulcro</button></td>
+                        <td><?php echo $fila[$i]["cedul_prop"] == null ? "Sin Propietario" :  $fila[$i]["cedul_prop"]; $cdn=$fila[$i]["can_sepu"]; ?></td>
+                        <td style="text-align:center"><button type="button" class="btn btn-outline-success" onclick="location.href='cadaveres.php?id=<?php echo $cod ?>'">Administrar Sepulcro</button></td>
                     </tr>
 
                 <?php
