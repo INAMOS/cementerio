@@ -4,22 +4,51 @@
 
 <?php include "partials/sidebar.php"; ?>
 
+
+<?php
+
+    include "../database/conexion.php";
+
+    $con=conectar();
+
+    $query="SELECT cedul_cadv,nombr_cadv,apell_cadv,fech_inhum FROM tabla_cadv WHERE cedul_cadv=:cedul_cadv";
+$resultado=$con->prepare($query);
+$cedpro="26289114";
+$resultado->bindParam(":cedul_cadv",$cedpro);
+$resultado->execute();
+$filas=$resultado->fetchAll();
+
+?>
 <div class="container">
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Ingresar cadaver al restero</div>
         <div class="card-body">
-            <form action="../action/reg_rest.php" method="POST">
+            <form action="../action/reg_rest.php?ced=26289114&id=<?php echo $_GET['id']?>" method="POST">
+                <fieldset disabled>
+                    <div class="form-group">
+                        <label for="disabledTextInput">Cedula</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="<?php echo $filas[0]["cedul_cadv"]; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="disabledTextInput">Nombres</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="<?php echo $filas[0]["nombr_cadv"]. " " . $filas[0]["apell_cadv"] ; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="disabledTextInput">Fecha de Inhumacion</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="<?php echo $filas[0]["fech_inhum"];  ?>">
+                    </div>
+                </fieldset>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input type="date" id="fecha" class="form-control" placeholder="Fecha de Exhumacion" name="fecha_exhu"
-                            required="required">
+                        <input type="date" id="fecha" class="form-control" placeholder="Fecha de Exhumacion"
+                            name="fecha_exhu" required="required">
                         <label for="celular">Fecha de Exhumacion</label>
                     </div>
                 </div>
                 <div class="form-group">
-
                     <label for="exampleFormControlTextarea1">Descripcion</label>
-                    <textarea name="descr_exhu" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                    <textarea name="descr_exhu" class="form-control" id="exampleFormControlTextarea1"
+                        rows="2"></textarea>
                 </div>
                 <input type="submit" class="btn btn-primary btn-block" value="Ingresar">
             </form>

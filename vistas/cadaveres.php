@@ -17,6 +17,26 @@
     </button>
 </div> -->
 
+<!-- 
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div> -->
+
+
+<div class="card">
+  <h5 class="card-header">Traspasar Sepulcro</h5>
+  <div class="card-body">
+    <h5 class="card-title">Sepulcro <?php echo $_GET["id"]?></h5>
+    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+    <a href="venta.php?id=<?php echo $_GET["id"]?>" class="btn btn-primary">Venta</a>
+  </div>
+</div>
+
+<hr>
 <?php
  include "../database/conexion.php";
 
@@ -88,7 +108,7 @@ endif;
                 <?php
 
                 
-                 $con=conectar();
+                $con=conectar();
                 // $query="SELECT cedul_cadv,nombr_cadv,apell_cadv,fech_inhum FROM tabla_cadv ";
                 $id=$_GET["id"];
                 $query="SELECT can_sepu FROM tabla_sepu WHERE codig_sepu=:id";
@@ -106,7 +126,10 @@ endif;
                 if(isset($fila[0]["can_sepu"])){
                     
                     $can=$fila[0]["can_sepu"];
-                    $query="SELECT * FROM tabla_cadv INNER JOIN tabla_sepu ON tabla_cadv.codig_fosa=:id";
+                    // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_sepu.codig_sepu=:id";
+                    // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_sepu.codig_sepu=:id WHERE tabla_sepu.codig_sepu=:id";
+                    // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_cadv.codig_fosa=:id";
+                    $query="SELECT * FROM tabla_cadv WHERE codig_fosa=:id";
 
                     $result=$con->prepare($query);
                     $result->bindParam(":id",$id);
@@ -132,7 +155,11 @@ endif;
                         <td><?php echo  isset($fila[$i]["cedul_cadv"]) ? "En uso":"Disponible" ?></td>
                         <td style="text-align:center"><button type="button" class="btn btn-outline-success"
                                 onclick="location.href='cadaver.php?id=<?php echo $_GET['id'];?>'">Registrar
-                                Cadaver</button></td>
+                                Cadaver</button>
+                                <button type="button" class="btn btn-outline-primary"
+                                onclick="location.href='restero.php?id=<?php echo $_GET['id'];?>'">Restero
+                                Cadaver</button>
+                                </td>
 
                     </tr>
 
