@@ -129,7 +129,7 @@ endif;
                     // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_sepu.codig_sepu=:id";
                     // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_sepu.codig_sepu=:id WHERE tabla_sepu.codig_sepu=:id";
                     // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_cadv.codig_fosa=:id";
-                    $query="SELECT * FROM tabla_cadv WHERE codig_fosa=:id";
+                    $query="SELECT * FROM tabla_cadv WHERE codig_fosa=:id ORDER BY nro_fosa";
 
                     $result=$con->prepare($query);
                     $result->bindParam(":id",$id);
@@ -137,6 +137,11 @@ endif;
                     
 
                     $fila=$result->fetchAll();
+                     $data= array();
+
+                    for($i=0; $i<sizeof($fila); $i++){
+                        $data[$fila[$i]["nro_fosa"]]=$fila[$i]["nro_fosa"];
+                    }
 
                 for($i=0; $i<$can; $i++):
                 
@@ -152,14 +157,26 @@ endif;
 
                     <tr>
                         <td><?php echo $i+1 ?></td>
-                        <td><?php echo  isset($fila[$i]["cedul_cadv"]) ? "En uso":"Disponible" ?></td>
-                        <td style="text-align:center"><button type="button" class="btn btn-outline-success"
-                                onclick="location.href='cadaver.php?id=<?php echo $_GET['id'];?>'">Registrar
-                                Cadaver</button>
+                        <td><?php 
+
+                            if(isset($data[$i+1])){
+
+                                $n=$i+1;
+                                echo  $data[$n]== $n ? "En uso":"Disponible" ;
+
+                            }else{
+                                echo "Disponible";
+                            }
+                            // echo  isset($fila[$i]["nro_fosa"]) ? "En uso":"Disponible" 
+                            
+                            
+                        ?></td>
+                        <td style="text-align:center">
+                            <button type="button" class="btn btn-outline-success" onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar Cadaver</button>
                                 <button type="button" class="btn btn-outline-primary"
                                 onclick="location.href='restero.php?id=<?php echo $_GET['id'];?>'">Restero
                                 Cadaver</button>
-                                </td>
+                        </td>
 
                     </tr>
 

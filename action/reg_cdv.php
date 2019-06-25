@@ -9,6 +9,7 @@ $nombpro=$_POST["nombr_cdv"];
 $apellpro=$_POST['apell_cadv'];
 $fecha=$_POST['fecha_inhum'];
 $emp=$_POST['cod_fosa'];
+$nro=$_GET['nro'];
 
 
 // var_dump($cedpro);
@@ -18,7 +19,7 @@ $emp=$_POST['cod_fosa'];
 
 // $query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cad,apell_cadv,fech_inhum,estatus_cd,tabla_sepu_tabla_sepu,tabla_sepu_tabla_prop_cedul_prop,tabla_exhu_fecha_exhu) VALUES (cedul_cadv,nombr_cad,apell_cadv,fech_inhum);";
 // $query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cadv,apell_cadv,fech_inhum,estatus_cd,tabla_sepu_tabla_sepu,tabla_sepu_tabla_prop_cedul_prop,tabla_exhu_fecha_exhu) VALUES (:cedul_cadv,:nombr_cad,:apell_cadv,:fech_inhum,:estatus_cd,:tabla_sepu_tabla_sepu,:tabla_sepu_tabla_prop_cedul_prop,:tabla_exhu_fecha_exhu)";
-$query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cadv,apell_cadv,fech_inhum,codig_fosa) VALUES (:cedul_cadv,:nombr_cadv,:apell_cadv,:fech_inhum,:codig_fosa)";
+$query="INSERT INTO tabla_cadv (cedul_cadv,nombr_cadv,apell_cadv,fech_inhum,nro_fosa,codig_fosa) VALUES (:cedul_cadv,:nombr_cadv,:apell_cadv,:fech_inhum,:nro_fosa,:codig_fosa)";
 
 $resultado=$con->prepare($query);
 
@@ -26,6 +27,7 @@ $resultado->bindParam(":cedul_cadv",$cedpro);
 $resultado->bindParam(":nombr_cadv",$nombpro);
 $resultado->bindParam(":apell_cadv",$apellpro);
 $resultado->bindParam(":fech_inhum",$fecha);
+$resultado->bindParam(":nro_fosa",$nro);
 $resultado->bindParam(":codig_fosa",$emp);
 // $resultado->bindParam(":estatus_cd",$emp);
 // $resultado->bindParam(":tabla_sepu_tabla_sepu",$emp);
