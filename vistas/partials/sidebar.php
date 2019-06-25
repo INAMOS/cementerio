@@ -15,7 +15,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <h6 class="dropdown-header">Registro:</h6>
-                <a class="dropdown-item" href="venta.php">Venta</a>
+                <!-- <a class="dropdown-item" href="venta.php">Venta</a> -->
                 <a class="dropdown-item" href="sepulcro.php">Sepulcro</a>
                 <div class="dropdown-divider"></div>
                 <h6 class="dropdown-header">Listado:</h6>

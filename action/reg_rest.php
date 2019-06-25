@@ -19,7 +19,25 @@
  if($result->execute()){
 
 
-    header("location:../vistas/cadaveres.php?id=$id");
+  $con=conectar();
+  $ced=$_GET["ced"];
+  $value=1;
+
+
+  $query="UPDATE tabla_cadv SET restero=:res WHERE cedul_cadv=:ced";
+
+  $result=$con->prepare($query);
+
+  $result->bindParam(":res",$value);
+  $result->bindParam(":ced",$ced);
+
+  if($result->execute()){
+
+    header("location:../vistas/cadaveres.php?id=$id&exi=insertado");
+
+  }
+
+    
   
   }else {
   
@@ -32,5 +50,3 @@
 
 
 ?>
-
-

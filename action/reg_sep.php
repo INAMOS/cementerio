@@ -15,7 +15,6 @@ $cantidad=$descrtip =="publico" ? 1 : $_POST["private"];
 $query="INSERT INTO tabla_sepu (codig_sepu,descr_sepu,descr_tipo,can_sepu) VALUES (:codig_sepu,:descr_sepu,:descr_tipo,:can_sepu)";
 
 $result=$con->prepare($query);
-
 $result->bindParam(":codig_sepu",$codig);
 $result->bindParam(":descr_sepu",$descrsep);
 $result->bindParam(":descr_tipo",$descrtip);

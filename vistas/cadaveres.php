@@ -140,7 +140,13 @@ endif;
                      $data= array();
 
                     for($i=0; $i<sizeof($fila); $i++){
-                        $data[$fila[$i]["nro_fosa"]]=$fila[$i]["nro_fosa"];
+                        // $data[$fila[$i]["nro_fosa"]]=$fila[$i]["nro_fosa"];
+                        $data[$fila[$i]["nro_fosa"]]=array(
+                            
+                            "nro" => $fila[$i]["nro_fosa"], 
+                            "restero"=>$fila[$i]["restero"]
+                        
+                        );
                     }
 
                 for($i=0; $i<$can; $i++):
@@ -162,7 +168,15 @@ endif;
                             if(isset($data[$i+1])){
 
                                 $n=$i+1;
-                                echo  $data[$n]== $n ? "En uso":"Disponible" ;
+                                if($data[$n]["nro"]==$n && $data[$n]["restero"] != 1){
+                                    
+                                    echo "En Uso";             
+
+                                }else{
+                                    echo "Disponible";        
+                                }
+                           
+                                // echo  $data[$n]["nro"] == $n ? "En uso":"Disponible" ;
 
                             }else{
                                 echo "Disponible";
@@ -172,10 +186,40 @@ endif;
                             
                         ?></td>
                         <td style="text-align:center">
-                            <button type="button" class="btn btn-outline-success" onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar Cadaver</button>
+
+
+                            <?php 
+
+                                if(!isset($data[$i+1])){ 
+
+                                    // if($data[$i+1]["restero"] != 1){
+                            
+                            ?>
+                                <button type="button" class="btn btn-outline-success" onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar Cadaver</button>
+                            <?php 
+
+                                    // }
+
+                            }else if(isset($data[$i+1])){
+
+                                if($data[$i+1]["nro"]==$i+1 && $data[$i+1]["restero"] == 1){
+    
+                            ?>
+                                 <button type="button" class="btn btn-outline-success" onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar Cadaver</button>
+
+                            <?php
+                            } 
+                            
+                            else{?>
+
+                                
+                                <button type="button" class="btn btn-outline-danger" onclick="location.href='muerto.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Data del Cadaver</button>
                                 <button type="button" class="btn btn-outline-primary"
-                                onclick="location.href='restero.php?id=<?php echo $_GET['id'];?>'">Restero
+                                onclick="location.href='restero.php?id=<?php echo $_GET['id'];?>&nro=<?php echo $i+1 ?>'">Restero
                                 Cadaver</button>
+                         
+                            <?php }} ?>
+                               
                         </td>
 
                     </tr>
