@@ -66,7 +66,10 @@
                     <a class="nav-link active" href="index.php" style="color:white"><i class="fa fa-home"></i>Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color:white"><i class="fa fa-university"></i>Empresa</a>
+                    <a class="nav-link" href="exampleModal" style="color:white"  data-toggle="modal" data-target="#exampleModal"><i class="fa fa-university"></i>Empresa</a>
+                    <!-- <button type="button" class="nav-link" data-toggle="modal" data-target="#exampleModal">
+  Empresa
+</button> -->
                 </li>
                 <li class="nav-item">
                     <a  class="nav-link" href="vistas/pdf/ordenanza.pdf" target="blank" style="color:white"><i class="fa fa-gavel"></i>Ordenanza</a>
@@ -143,124 +146,51 @@
 
         </div>
 
-                        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+       
+      <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
   Launch demo modal
-</button>
+</button> -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Empresa</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <strong>Misión</strong><br>
+           <p> La misión del Cementerio municipal es  dar sepultura a todas las personas en forma incluyente, sin distinción de procedencia social, género, raza, credo político o religioso; respetando la diversidad de pensamientos y creencias, expresados en los distintos ritos y costumbres que tienen lugar en el interior del Cementerio, entregando a todos, un lugar de reflexión y recogimiento. Todos los servicios del cementerio se realizan con profesionalidad por parte de los trabajadores, mostrando una actitud ética y de respeto hacia las personas usuarias. </p>
+ <strong>VISIÓN</strong><br>
+
+
+<p>Optimizar el mantenimiento y organización  que debe de existir dentro de esta instalación para que la comunidad utilice este servicio de manera más eficiente. Pero sobre todo, brindar la calidad humana en el servicio necesario en estos momentos tan sensibles, al presentarle soluciones integrales que le permitirán enfocarse en el aspecto afectivo de las circunstancias.
+ </p>
+<strong>OBJETIVO FUNCIONAL</strong>
+
+<p>
+Promover y ejecutar d manera eficiente y oportuna la ordenanza municipal de administración y mantenimiento del cementerio municipal y demás leyes estatales y nacionales siendo de nuestra gestión dar cumplimiento las siguientes funciones:
+A. La estructura orgánica del servicio, su planificación y ordenamiento.
+B. La realización de las obras, servicios y trabajos necesarios para la reparación, conservación, cuidado y limpieza de los cementerios y, en particular, de sus elementos urbanísticos, jardinería, construcciones e instalaciones, así como para el funcionamiento de éstos.
+C. La imposición y exacción de tributos, con arreglo a las ordenanzas fiscales, y la regulación de las condiciones de uso y disfrute de las unidades de enterramiento.
+D. La administración, inspección y control estadístico.
+E. La inhumación, exhumación, traslado e incineración de cadáveres y la reducción de restos.</p>
+
       </div>
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-            Launch demo modal
-        </button> -->
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
-
-        <!-- 
-        <form class="form-signin">
-            <img class="mb-4" src="vistas\public\images\logo.png" alt="" width="40%" height="40%">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
-                autofocus="">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""> -->
-        <!-- <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">
-                            <span class="input-group-addon">
-                                <i class="fa fa-key"></i>
-                            </span>
-                        </span>
-                    </div>
-                    <input type="password" class="form-control" name="password" placeholder="Contrasena" aria-label="Username" aria-describedby="basic-addon1" required>
-                </div> -->
-
-        <!-- <img class="mb-4" src="vistas\public\images\logo.png" alt="" width="40%" height="40%">
-            <div class="form-group">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">
-                            <span class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </span>
-                        </span>
-                    </div>
-                    <input type="text" class="form-control" name="user" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">
-                            <span class="input-group-addon">
-                                <i class="fa fa-key"></i>
-                            </span>
-                        </span>
-                    </div>
-                    <input type="password" class="form-control" name="password" placeholder="Contrasena" aria-label="Username" aria-describedby="basic-addon1" required>
-                </div> -->
-        <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button> -->
-        <!-- <p class="mt-5 mb-3 text-muted">© 2017-2019</p> -->
-        <!-- </form> -->
-
-
-
-
-
-        <!-- </div> -->
-
-
-
-
-        <!-- <div class="button_emergentes" style="display:none; text-align:justify;" >
-			<table style="width:100%;"><tr>
-            <td style="color:#e5dd4e;" align="right"><strong style="cursor:pointer;" onClick="class='button'";>Cerrar</strong></td>
-            </tr></table>
-            <strong style="color:#e5dd4e;">Misión</strong><br>La misión del Cementerio municipal es  dar sepultura a todas las personas en forma incluyente, sin distinción de procedencia social, género, raza, credo político o religioso; respetando la diversidad de pensamientos y creencias, expresados en los distintos ritos y costumbres que tienen lugar en el interior del Cementerio, entregando a todos, un lugar de reflexión y recogimiento. Todos los servicios del cementerio se realizan con profesionalidad por parte de los trabajadores, mostrando una actitud ética y de respeto hacia las personas usuarias.<br><br>
-            <strong style="color:#e5dd4e;">Visión</strong><br>Optimizar el mantenimiento y organización  que debe de existir dentro de esta instalación para que la comunidad utilice este servicio de manera más eficiente. Pero sobre todo, brindar la calidad humana en el servicio necesario en estos momentos tan sensibles, al presentarle soluciones integrales que le permitirán enfocarse en el aspecto afectivo de las circunstancias.<br><br>
-            <strong style="color:#e5dd4e;">Objetivo Funcional</strong><br>Promover y ejecutar d manera eficiente y oportuna la ordenanza municipal de administración y mantenimiento del cementerio municipal y demás leyes estatales y nacionales siendo de nuestra gestión dar cumplimiento las siguientes funciones:
-            <br><br> A. La estructura orgánica del servicio, su planificación y ordenamiento.<br>B. La realización de las obras, servicios y trabajos necesarios para la reparación, conservación, cuidado y limpieza de los cementerios y, en particular, de sus elementos urbanísticos, jardinería, construcciones e instalaciones, así como para el funcionamiento de éstos.<br>C. La imposición y exacción de tributos, con arreglo a las ordenanzas fiscales, y la regulación de las condiciones de uso y disfrute de las unidades de enterramiento.<br>D. La administración, inspección y control estadístico.<br>E. La inhumación, exhumación, traslado e incineración de cadáveres y la reducción de restos.<br>
-        </div> -->
+        
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
