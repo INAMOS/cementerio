@@ -7,7 +7,23 @@
 <!-- Sidebar -->
 <?php include "partials/sidebar.php"; ?>
 
+<?php if(isset($_GET["exi"])): ?>
 
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading"><?php echo $_GET["exi"]; ?></h4>
+    <hr>
+    <!-- <p class="mb-0">Aqui puedes ver todas los sepulcros que hay</p>  -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<?php endif; ?>
+
+
+<script>
+$('.alert').alert()
+</script>
 <!-- <div class="alert alert-primary alert-dismissible fade show" role="alert">
     <h4 class="alert-heading">Estos son los registros del cementerio!</h4>
     <hr>
@@ -27,16 +43,6 @@
 </div> -->
 
 
-<div class="card">
-  <h5 class="card-header">Traspasar Sepulcro</h5>
-  <div class="card-body">
-    <h5 class="card-title">Sepulcro <?php echo $_GET["id"]?></h5>
-    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-    <a href="venta.php?id=<?php echo $_GET["id"]?>" class="btn btn-primary">Venta</a>
-  </div>
-</div>
-
-<hr>
 <?php
  include "../database/conexion.php";
 
@@ -55,7 +61,7 @@ $result->execute();
 $fila=$result->fetchAll();
 
 
-if($fila[0]["cedul_prop"]==null):
+if($fila[0]["cedul_prop"]==null){
 
 ?>
 <div class="jumbotron">
@@ -68,10 +74,26 @@ if($fila[0]["cedul_prop"]==null):
 
 <?php
 
-endif;
+}else{
 
 ?>
 
+
+<div class="card">
+  <h5 class="card-header">Traspasar Sepulcro</h5>
+  <div class="card-body">
+    <h5 class="card-title">Sepulcro <?php echo $_GET["id"]?></h5>
+    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+    <a href="venta.php?id=<?php echo $_GET["id"]?>" class="btn btn-primary">Venta</a>
+  </div>
+</div>
+
+<hr>
+
+<?php 
+
+}
+?>
 <!-- DataTables Example -->
 <div class="card mb-3">
     <div class="card-header">

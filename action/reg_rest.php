@@ -5,17 +5,18 @@
     $ced=$_GET["ced"];
     $fechex=$_POST["fecha_exhu"];
     $descrex=$_POST["descr_exhu"];
+    $id=$_GET["id"];
 
-
- $query="INSERT INTO tabla_exhu (fecha_exhu, descr_exhu,cedul_c) VALUES (:fecha_exhu, :descr_exhu,:cedul_c)";
+ $query="INSERT INTO tabla_exhu (fecha_exhu, descr_exhu,cedul_c,cod_sep) VALUES (:fecha_exhu,:descr_exhu,:cedul_c,:cod_sep)";
 
  $result=$con->prepare($query);
 
  $result->bindParam(":fecha_exhu",$fechex);
  $result->bindParam(":descr_exhu",$descrex);
  $result->bindParam(":cedul_c",$ced);
+ $result->bindParam(":cod_sep",$id);
 
- $id=$_GET["id"];
+
  if($result->execute()){
 
 
@@ -33,7 +34,7 @@
 
   if($result->execute()){
 
-    header("location:../vistas/cadaveres.php?id=$id&exi=insertado");
+    header("location:../vistas/cadaveres.php?id=$id&exi=ingreso correctamente");
 
   }
 

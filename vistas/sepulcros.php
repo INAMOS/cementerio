@@ -6,6 +6,15 @@
 
 <!-- Sidebar -->
 <?php include "partials/sidebar.php"; ?>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading">SEPULCROS</h4>
+    <hr>
+    <p class="mb-0">Aqui puedes ver todas los sepulcros que hay<</p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
 
 <?php if(isset($_GET["msj"])): ?>
 
@@ -31,7 +40,7 @@ $('.alert').alert()
 <div class="card mb-3">
     <div class="card-header">
         <i class="fas fa-table"></i>
-        Data de Ejemplo</div>
+        SEPULCROS</div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -80,6 +89,7 @@ $('.alert').alert()
                     <tr>
                         <td><?php echo $fila[$i]["codig_sepu"]; $cod=$fila[$i]["codig_sepu"]; ?></td>
                         <td><?php echo $fila[$i]["descr_sepu"] ?></td>
+                        <!-- <td><?php echo date('Y-m-d') ?></td> -->
                         <td><?php echo $fila[$i]["descr_tipo"] ?></td>
                         <td><?php echo $fila[$i]["can_sepu"] ?></td>
                         <td><?php echo $fila[$i]["cedul_prop"] == null ? "Sin Propietario" :  $fila[$i]["cedul_prop"]; $cdn=$fila[$i]["can_sepu"]; ?></td>
@@ -87,10 +97,7 @@ $('.alert').alert()
                     </tr>
 
                 <?php
-                 
-                   
-
-
+                
                 endfor;
                 ?>
                

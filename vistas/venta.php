@@ -11,18 +11,31 @@ include "../database/conexion.php";
 
 $con=conectar();
 
-$query="SELECT cedul_prop,nombr_prop,apell_prop,direcc_pro FROM tabla_prop WHERE cedul_prop=:cedul_prop";
+$query="SELECT cedul_prop FROM tabla_sepu WHERE codig_sepu=:codig";
 $resultado=$con->prepare($query);
-$cedpro="26289114";
-$resultado->bindParam(":cedul_prop",$cedpro);
-$resultado->execute();
-$filas=$resultado->fetchAll();
+$cod=$_GET["id"];
+$resultado->bindParam(":codig",$cod);
+
+if($resultado->execute()){
+
+    
+    $filas=$resultado->fetchAll();
+
+    $query="SELECT cedul_prop,nombr_prop,apell_prop,direcc_pro FROM tabla_prop WHERE cedul_prop=:cedu";
+    $resultado=$con->prepare($query);
+    $ced=$filas[0]["cedul_prop"];
+    $resultado->bindParam(":cedu",$ced);
+
+    $resultado->execute();
+
+    $filas=$resultado->fetchAll();
+}
 
 ?>
 
 <div class="container">
 
-<div class="card card-register mx-auto mt-5">
+    <div class="card card-register mx-auto mt-5">
         <div class="card-header">Antiguo Propietario</div>
         <div class="card-body">
             <form action="../action/reg_vent.php" method="POST">
@@ -44,18 +57,18 @@ $filas=$resultado->fetchAll();
                             placeholder="<?php echo $filas[0]["direcc_pro"];  ?>">
                     </div>
                 </fieldset>
-         
+
             </form>
-       
+
         </div>
     </div>
-    
+
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Registrar Venta</div>
         <div class="card-body">
-            <form action="../action/reg_vent.php?id=<?php echo $_GET['id']?>" method="POST">
+            <form action="../action/reg_vent.php?id=<?php echo $_GET['id']?>&ced=<?php echo $filas[0]["cedul_prop"] ?>" method="POST">
 
-            <div class="form-group">
+                <div class="form-group">
                     <div class="form-label-group">
                         <input type="text" id="cedula" class="form-control" name="cedul_comp"
                             placeholder="Email address" required="required" autofocus="autofocus">
@@ -87,29 +100,29 @@ $filas=$resultado->fetchAll();
                         <label for="celular">Celular</label>
                     </div>
                 </div>
-                    <div class="form-group">
-                        <div class="form-label-group">
-                            <input type="tel" id="telefono" class="form-control" placeholder="Email address"
-                                name="telef_comp" required>
-                            <label for="telefono">Telefono</label>
-                        </div>
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input type="tel" id="telefono" class="form-control" placeholder="Email address"
+                            name="telef_comp" required>
+                        <label for="telefono">Telefono</label>
                     </div>
-                    <div class="form-group">
-                        <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                name="correo_com" required>
-                            <label for="inputEmail">Email</label>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                            name="correo_com" required>
+                        <label for="inputEmail">Email</label>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Direccion</label>
-                        <textarea name="direcc_com" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            required></textarea>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Direccion</label>
+                    <textarea name="direcc_com" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        required></textarea>
 
-                    </div>
+                </div>
 
-                    <input type="submit" class="btn btn-primary btn-block" value="Registrar">
+                <input type="submit" class="btn btn-primary btn-block" value="Registrar">
             </form>
             <!-- <div class="text-center">
                 <a class="d-block small mt-3" href="login.html">Login Page</a>

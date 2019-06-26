@@ -5,20 +5,24 @@
 <?php include "partials/sidebar.php"; ?>
 
 
-<?php
-            
-                    if(isset($_GET["exi"])):                
-            
-                ?>
+<?php if(isset($_GET["exi"])): ?>
 
-    <div class="alert alert-success" role="alert">
-        <?php echo $_GET["exi"]?>
-    </div>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading"><?php echo $_GET["exi"]; ?></h4>
+    <hr>
+    <!-- <p class="mb-0">Aqui puedes ver todas los sepulcros que hay</p> -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
 
-    <?php
-                        unset($_GET["exi"]);
-                        endif;
-                ?>
+<?php endif; ?>
+
+<script>
+$('.alert').alert()
+</script>
+
+
 <div class="container">
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Registro de Sepulcro</div>

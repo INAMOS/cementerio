@@ -21,7 +21,8 @@
                 <h6 class="dropdown-header">Listado:</h6>
                 <!-- <a class="dropdown-item" href="cadaveres.php">Cadaveres</a> -->
                 <a class="dropdown-item" href="sepulcros.php">Sepulcro</a>
-                <a class="dropdown-item" href="ventas.php">Venta</a>
+                <a class="dropdown-item" href="ventas.php">Ventas</a>
+                <a class="dropdown-item" href="restos.php">Restero</a>
             </div>
         </li>
         <!-- <li class="nav-item">

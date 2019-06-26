@@ -45,11 +45,11 @@ $resultado->bindParam(":codig_fosa",$emp);
 
 if($resultado->execute()){
 
-  header("location:../vistas/cadaveres.php?exi=Insertado correctamente&id=$emp");
+  header("location:../vistas/cadaveres.php?exi=Cadaver registrado exitosamente&id=$emp");
 
 }else {
 
-  header('location:../vistas/cadaver.php?err=Hubo un error al insertar, vuelve a intentarlo');
+  header('location:../vistas/cadaveres.php?err=Hubo un error al insertar, vuelve a intentarlo');
 
 }
 
