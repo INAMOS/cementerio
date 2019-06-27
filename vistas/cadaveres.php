@@ -80,12 +80,12 @@ if($fila[0]["cedul_prop"]==null){
 
 
 <div class="card">
-  <h5 class="card-header">Traspasar Sepulcro</h5>
-  <div class="card-body">
-    <h5 class="card-title">Sepulcro <?php echo $_GET["id"]?></h5>
-    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-    <a href="venta.php?id=<?php echo $_GET["id"]?>" class="btn btn-primary">Venta</a>
-  </div>
+    <h5 class="card-header">Traspasar Sepulcro</h5>
+    <div class="card-body">
+        <h5 class="card-title">Sepulcro <?php echo $_GET["id"]?></h5>
+        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+        <a href="venta.php?id=<?php echo $_GET["id"]?>" class="btn btn-primary">Venta</a>
+    </div>
 </div>
 
 <hr>
@@ -127,7 +127,7 @@ if($fila[0]["cedul_prop"]==null){
                 <tbody>
 
 
-                <?php
+                    <?php
 
                 
                 $con=conectar();
@@ -148,13 +148,15 @@ if($fila[0]["cedul_prop"]==null){
                 if(isset($fila[0]["can_sepu"])){
                     
                     $can=$fila[0]["can_sepu"];
+                    $res=0;
                     // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_sepu.codig_sepu=:id";
                     // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_sepu.codig_sepu=:id WHERE tabla_sepu.codig_sepu=:id";
                     // $query="SELECT * FROM tabla_sepu INNER JOIN tabla_cadv ON tabla_cadv.codig_fosa=:id";
-                    $query="SELECT * FROM tabla_cadv WHERE codig_fosa=:id ORDER BY nro_fosa";
+                    $query="SELECT * FROM tabla_cadv WHERE codig_fosa=:id AND restero=:res ORDER BY nro_fosa";
 
                     $result=$con->prepare($query);
                     $result->bindParam(":id",$id);
+                    $result->bindParam(":res",$res);
                     $result->execute();
                     
 
@@ -173,8 +175,6 @@ if($fila[0]["cedul_prop"]==null){
 
                 for($i=0; $i<$can; $i++):
                 
-
-                    
                 ?>
                     <!-- <tr>
                         <td><?php //echo $fila[$i]["cedul_cadv"] ?></td>
@@ -217,7 +217,9 @@ if($fila[0]["cedul_prop"]==null){
                                     // if($data[$i+1]["restero"] != 1){
                             
                             ?>
-                                <button type="button" class="btn btn-outline-success" onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar Cadaver</button>
+                            <button type="button" class="btn btn-outline-success"
+                                onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar
+                                Cadaver</button>
                             <?php 
 
                                     // }
@@ -227,21 +229,25 @@ if($fila[0]["cedul_prop"]==null){
                                 if($data[$i+1]["nro"]==$i+1 && $data[$i+1]["restero"] == 1){
     
                             ?>
-                                 <button type="button" class="btn btn-outline-success" onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar Cadaver</button>
+                            <button type="button" class="btn btn-outline-success"
+                                onclick="location.href='cadaver.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Registrar
+                                Cadaver</button>
 
                             <?php
                             } 
                             
                             else{?>
 
-                                
-                                <button type="button" class="btn btn-outline-danger" onclick="location.href='muerto.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Data del Cadaver</button>
-                                <button type="button" class="btn btn-outline-primary"
+
+                            <button type="button" class="btn btn-outline-danger"
+                                onclick="location.href='muerto.php?id=<?php echo $_GET['id'] ?>&nro=<?php echo $i+1 ?>'">Data
+                                del Cadaver</button>
+                            <button type="button" class="btn btn-outline-primary"
                                 onclick="location.href='restero.php?id=<?php echo $_GET['id'];?>&nro=<?php echo $i+1 ?>'">Restero
                                 Cadaver</button>
-                         
+
                             <?php }} ?>
-                               
+
                         </td>
 
                     </tr>

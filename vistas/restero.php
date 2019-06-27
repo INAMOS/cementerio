@@ -23,12 +23,14 @@ include "../database/conexion.php";
 
     $con=conectar();
 
-    $query="SELECT cedul_cadv,nombr_cadv,apell_cadv,fech_inhum FROM tabla_cadv WHERE codig_fosa=:id AND nro_fosa=:nro";
+    $query="SELECT cedul_cadv,nombr_cadv,apell_cadv,fech_inhum FROM tabla_cadv WHERE codig_fosa=:id AND nro_fosa=:nro AND restero=:res";
     $resultado=$con->prepare($query);
     $id=$_GET["id"];
     $nro=$_GET["nro"];
+    $res=0;
     $resultado->bindParam(":id",$id); 
     $resultado->bindParam(":nro",$nro);
+    $resultado->bindParam(":res",$res);
     $resultado->execute();
     $filas=$resultado->fetchAll();
 

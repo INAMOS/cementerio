@@ -14,10 +14,13 @@
                 <span>Paginas</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+                <?php if($_SESSION["usuario"]["tipo"]=="master"){  ?>
                 <h6 class="dropdown-header">Registro:</h6>
                 <!-- <a class="dropdown-item" href="venta.php">Venta</a> -->
                 <a class="dropdown-item" href="sepulcro.php">Sepulcro</a>
                 <div class="dropdown-divider"></div>
+                <?php }?>
                 <h6 class="dropdown-header">Listado:</h6>
                 <!-- <a class="dropdown-item" href="cadaveres.php">Cadaveres</a> -->
                 <a class="dropdown-item" href="sepulcros.php">Sepulcro</a>
