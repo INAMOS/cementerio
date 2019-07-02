@@ -16,7 +16,22 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
+    
 </div>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading">Hay cadaveres que deben ser sacados!</h4>
+    <p>Algunos muertos ya cumplieron su tiempo</p>
+    <hr>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    
+  <button type="button" onClick="location.href='sepulcros.php'" class="btn btn-danger">Danger</button>
+    
+</div>
+
+
 
 
 <!-- <div class="card mb-3">

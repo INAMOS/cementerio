@@ -51,7 +51,7 @@ $con=conectar();
 
 //  $query="SELECT cedul_cadv,nombr_cadv,apell_cadv,fech_inhum FROM tabla_cadv ";
 $id=$_GET["id"];
-$query="SELECT cedul_prop FROM tabla_sepu WHERE codig_sepu=:id";
+$query="SELECT cedul_prop,descr_sepu FROM tabla_sepu WHERE codig_sepu=:id";
 
 $result=$con->prepare($query);
 $result->bindParam(":id",$id);
@@ -74,7 +74,7 @@ if($fila[0]["cedul_prop"]==null){
 
 <?php
 
-}else{
+}else if($fila[0]["cedul_prop"]=="privado"){
 
 ?>
 
@@ -92,8 +92,21 @@ if($fila[0]["cedul_prop"]==null){
 
 <?php 
 
-}
+}else{
 ?>
+
+<div class="card">
+    <h5 class="card-header">Alquilar Sepulcro</h5>
+    <div class="card-body">
+        <h5 class="card-title">Sepulcro <?php echo $_GET["id"]?></h5>
+        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+        <a href="venta.php?id=<?php echo $_GET["id"]?>" class="btn btn-primary">Alquilar</a>
+    </div>
+</div>
+
+<hr>
+
+<?php }?>
 <!-- DataTables Example -->
 <div class="card mb-3">
     <div class="card-header">

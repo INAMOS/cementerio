@@ -66,29 +66,17 @@ if($resultado->execute()){
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Registrar Venta</div>
         <div class="card-body">
-            <form action="../action/reg_vent.php?id=<?php echo $_GET['id']?>&ced=<?php echo $filas[0]["cedul_prop"] ?>"
-                method="POST">
-
-                <!-- <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input type="text" id="codigovent" class="form-control" name="cos_vent"
-                                    placeholder="First name" required="required">
-                                <label for="codigovent">Precio de venta</label>
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
-                
-
-                <div class="form-group">
+            <form action="../action/reg_vent.php?id=<?php echo $_GET['id']?>&ced=<?php echo $filas[0]["cedul_prop"] ?>" method="POST">
+            <div class="form-group">
                     <div class="form-label-group">
-                        <input type="text" id="cedula" class="form-control" name="cedul_comp"
-                            placeholder="Email address" required="required" autofocus="autofocus">
-                        <label for="cedula">Cedula</label>
+                        <input type="text" id="cedula" class="form-control" name="costo_vent"
+                            placeholder="costo de la venta" required="required" autofocus="autofocus">
+                        <label for="cedula">Precio de la venta</label>
                     </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="descr_vent" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="exampleFormControlTextarea1">Descripcion de la venta</label>
                 </div>
                 <div class="form-group">
                     <div class="form-row">
@@ -117,9 +105,16 @@ if($resultado->execute()){
                 </div>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input type="tel" id="telef_comp" class="form-control" placeholder="numero telefonico"
+                        <input type="tel" id="celular" class="form-control" placeholder="numero telefonico"
                             name="telef_comp">
-                        <label for="telef_comp">Telefono</label>
+                        <label for="celular">Celular</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input type="tel" id="telefono" class="form-control" placeholder="Email address"
+                            name="telef_comp">
+                        <label for="telefono">Telefono</label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -129,39 +124,9 @@ if($resultado->execute()){
                         <label for="inputEmail">Email</label>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Direccion</label>
-                    <textarea name="direcc_com" class="form-control" id="exampleFormControlTextarea1"
-                        rows="3"></textarea>
-
-                </div>
-                <h3>DATOS DE VENTA</h3>
-                <br>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input type="text" id="codigovent" class="form-control" name="cos_vent"
-                                    placeholder="First name" required="required">
-                                <label for="codigovent">Precio de venta</label>
-                            </div>
-                        </div>
-                        <!-- <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Descripcion de venta</label>
-                                <textarea name="descr_vent" class="form-control" id="exampleFormControlTextarea1"
-                                    rows="3"></textarea>
-                            </div>
-                        </div> -->
-
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descripcion de venta</label>
-                    <textarea name="descr_vent" class="form-control" id="exampleFormControlTextarea1"
-                        rows="3"></textarea>
+                    <textarea name="direcc_com" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
                 </div>
 

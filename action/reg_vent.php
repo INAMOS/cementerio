@@ -4,23 +4,20 @@ include "../database/conexion.php";
 
 $con=conectar();
 
+
 $cedcomp=$_POST['cedul_comp'];
 $nombcomp=$_POST["nombr_comp"];
 $apellcomp=$_POST['apell_comp'];
+$costov=$_POST['cos_vent'];
+$descrv=$_POST['descr_vent'];
 $celcomp=$_POST["celul_comp"];
 $telefcomp=$_POST['telef_comp'];
 $correocomp=$_POST["correo_com"];
 $direcccomp=$_POST["direcc_com"];
 
 
-$query="SELECT cedul_prop,
-nombr_prop,
-apell_prop,
-celul_prop,
-telef_prop,
-correo_pro,
-direcc_pro
-FROM tabla_prop WHERE cedul_prop=:cedu";
+$query="SELECT cedul_prop,nombr_prop,apell_prop,celul_prop,telef_prop,correo_pro,direcc_pro FROM tabla_prop WHERE cedul_prop=:cedu";
+
 
 $resultado=$con->prepare($query);
 
@@ -36,8 +33,10 @@ if(isset($filas[0]["cedul_prop"])){
     
     $con=conectar();
 
+
+
     // $query="UPDATE tabla_sepu SET  cedul_prop=:ced WHERE codig_sepu=:id";
-    $sql = "UPDATE `tabla_sepu`  SET cedul_prop=:ced WHERE cedul_prop=:ced_rem";
+    $sql ="UPDATE `tabla_sepu`  SET cedul_prop=:ced WHERE cedul_prop=:ced_rem";
     $id=$_GET["id"];
     $ced=$_GET["ced"];
     $resultado=$con->prepare($sql);
@@ -49,8 +48,9 @@ if(isset($filas[0]["cedul_prop"])){
   
     $con=conectar();
   
-    // $query="UPDATE tabla_sepu SET  cedul_prop=:ced WHERE codig_sepu=:id";
-    $sql = "INSERT `tabla_vent` SET `cedul_prop` = :ced WHERE `tabla_sepu`.`codig_sepu` = :id";
+    $query="UPDATE tabla_sepu SET  cedul_prop=:ced WHERE codig_sepu=:id";
+    // $sql = "UPDATE `tabla_vent` SET `cedul_prop` = :ced WHERE `tabla_sepu`.`codig_sepu` = :id";
+    // $sql="INSERT ";
     $id=$_GET["id"];
     $resultado=$con->prepare($sql);
   
@@ -58,7 +58,7 @@ if(isset($filas[0]["cedul_prop"])){
     $resultado->bindParam(":id",$id);
   
   
-    header('location:../vistas/sepulcros.php?exi=Vendidio el sepulcro');
+    header('location:../vistas/sepulcros.php?exi=Vendido el sepulcro');
   
    }else {
     header('location:../vistas/sepulcros.php?err=Error intentelo de nuevo');

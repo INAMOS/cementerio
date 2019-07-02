@@ -49,7 +49,7 @@ $('.alert').alert()
                         <th>Codigo</th>
                         <th>Descripcion</th>
                         <th>Tipo</th>
-                        <th>cantidad sepulcro</th>
+                        <th>cantidad de fosas</th>
                         <th>cedula propietario</th>
                         <th>actividad</th>
                     </tr>

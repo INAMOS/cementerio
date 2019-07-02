@@ -37,21 +37,21 @@
                 <div class="form-group">
                     <div class="form-label-group">
                         <input type="tel" id="celular" class="form-control" placeholder="Email address"
-                            name="celul_comp" required>
+                            name="celul_comp">
                         <label for="celular">Celular</label>
                     </div>
                 </div>
                     <div class="form-group">
                         <div class="form-label-group">
                             <input type="tel" id="telefono" class="form-control" placeholder="Email address"
-                                name="telef_comp" required>
+                                name="telef_comp">
                             <label for="telefono">Telefono</label>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-label-group">
                             <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                name="correo_com" required>
+                                name="correo_com" >
                             <label for="inputEmail">Email</label>
                         </div>
                     </div>

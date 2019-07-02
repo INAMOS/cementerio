@@ -47,9 +47,6 @@
     else{
         header("location:../index.php?error=Datos incorrectos, intentelo de nuevo");
     }
-
-
-
     
 
 ?>

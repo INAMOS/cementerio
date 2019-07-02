@@ -36,15 +36,19 @@
                 </div>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input type="tel" id="celular" class="form-control" placeholder="Email address" name="celul_prop"
-                            required="required">
+                        <input type="tel" id="celular" class="form-control" placeholder="numero telefonico" name="celul_prop">
                         <label for="celular">Celular</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="correo_pro"
-                            required="required">
+                        <input type="tel" id="celular" class="form-control" placeholder="numero telefonico" name="telef_prop">
+                        <label for="celular">Telefono</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="correo_pro">
                         <label for="inputEmail">Email</label>
                     </div>
                 </div>
